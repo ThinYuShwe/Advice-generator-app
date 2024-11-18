@@ -1,0 +1,98 @@
+* {
+  /* border: 1px solid red; */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --lightCyan: hsl(193, 38%, 86%);
+  --neonGreen: hsl(150, 100%, 66%);
+  --grayishBlue: hsl(217, 19%, 38%);
+  --darkGrayishBlue: hsl(217, 19%, 24%);
+  --darkBlue: hsl(218, 23%, 16%);
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--darkBlue);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--grayishBlue);
+  border-radius: 1rem;
+  gap: 1rem;
+  padding: 1.5rem;
+  padding-bottom: 3rem;
+  position: relative;
+}
+
+.advice {
+  text-align: center;
+  color: var(--lightCyan);
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+}
+
+.title {
+  color: var(--neonGreen);
+}
+
+.linediv {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr; /* Ensures icon only takes the space it needs */
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.vertical-separator {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.vertical-separator span {
+  border: 1px solid var(--lightCyan);
+  background-color: var(--lightCyan);
+  width: 0.5rem;
+  height: 1.1rem;
+  border-radius: 0.3rem;
+}
+
+.horizontal {
+  background-color: var(--lightCyan);
+  height: 0.1rem;
+}
+
+.iconDiceDiv {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: var(--neonGreen);
+  position: absolute;
+  bottom: -2rem;
+  cursor: pointer;
+}
+
+.iconDiceDiv img {
+  width: 2rem;
+}
+
+@media screen and (min-width: 75rem) {
+  .main-container {
+    max-width: 30rem;
+  }
+}
